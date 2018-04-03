@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  ml:
+    build: ./code/
+    command: [python, /code/bayes_test.py]
+    volumes:
+      - ./code:/code
+    ports:
+      - "8000:8000"
